@@ -1,6 +1,14 @@
-﻿C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\MSBuild\Microsoft\VC\v160\Microsoft.CppBuild.targets(491,5): warning MSB8028: The intermediate directory (../Win32/Release\) contains files shared from another project (idLib.vcxproj).  This can lead to incorrect clean and rebuild behavior.
-  unit.cpp
-C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\MSBuild\Microsoft\VC\v160\Microsoft.CppBuild.targets(491,5): warning MSB8028: The intermediate directory (../Win32/Release\) contains files shared from another project (Game.vcxproj).  This can lead to incorrect clean and rebuild behavior.
+﻿C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\MSBuild\Microsoft\VC\v160\Microsoft.CppBuild.targets(491,5): warning MSB8028: The intermediate directory (../Win32/Release\) contains files shared from another project (idLib.vcxproj, MPGame.vcxproj).  This can lead to incorrect clean and rebuild behavior.
+  SysCmds.cpp
+C:\Users\Josef\git\Game-Mod-Q4\game\gamesys\SysCmds.cpp(814,2): warning C4996: 'sscanf': This function or variable may be unsafe. Consider using sscanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+C:\Users\Josef\git\Game-Mod-Q4\game\gamesys\SysCmds.cpp(1308,19): warning C4456: declaration of 'ent' hides previous local declaration
+C:\Users\Josef\git\Game-Mod-Q4\game\gamesys\SysCmds.cpp(1296,12): message : see declaration of 'ent'
+C:\Users\Josef\git\Game-Mod-Q4\game\gamesys\SysCmds.cpp(1680,12): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+C:\Users\Josef\git\Game-Mod-Q4\game\gamesys\SysCmds.cpp(1895,22): warning C4456: declaration of 'animator' hides previous local declaration
+C:\Users\Josef\git\Game-Mod-Q4\game\gamesys\SysCmds.cpp(1889,15): message : see declaration of 'animator'
+  WeaponBlaster.cpp
+  Generating Code...
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\MSBuild\Microsoft\VC\v160\Microsoft.CppBuild.targets(491,5): warning MSB8028: The intermediate directory (../Win32/Release\) contains files shared from another project (Game.vcxproj, MPGame.vcxproj).  This can lead to incorrect clean and rebuild behavior.
 C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\MSBuild\Microsoft\VC\v160\Microsoft.CppBuild.targets(1316,5): warning MSB8012: TargetPath(C:\Users\Josef\git\Game-Mod-Q4\../Win32/Release\Game.dll) does not match the Linker's OutputFile property value (C:\Users\Josef\git\Win32\Release\Gamex86.dll). This may cause your project to build incorrectly. To correct this, please make sure that $(OutDir), $(TargetName) and $(TargetExt) property values match the value specified in %(Link.OutputFile).
 C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\MSBuild\Microsoft\VC\v160\Microsoft.CppBuild.targets(1318,5): warning MSB8012: TargetName(Game) does not match the Linker's OutputFile property value (Gamex86). This may cause your project to build incorrectly. To correct this, please make sure that $(OutDir), $(TargetName) and $(TargetExt) property values match the value specified in %(Link.OutputFile).
      Creating library ..\Win32\Release\Gamex86.lib and object ..\Win32\Release\Gamex86.exp
