@@ -6,6 +6,10 @@
 
 #define BLASTER_SPARM_CHARGEGLOW		6
 
+
+
+//q4_mod include statements
+//#include "../mp/stats/StatManager.cpp";
 class rvWeaponBlaster : public rvWeapon {
 public:
 
@@ -434,6 +438,18 @@ stateResult_t rvWeaponBlaster::State_Fire ( const stateParms_t& parms ) {
 				Attack ( false, 1, spread, 0, 1.0f );
 				PlayEffect ( "fx_normalflash", barrelJointView, false );
 				PlayAnim( ANIMCHANNEL_ALL, "fire", parms.blendFrames );
+
+				//q4_mod getting player cursor coordinates
+				idPlayer* player1 = NULL;
+				player1 = gameLocal.GetLocalPlayer();
+				player1 = gameLocal.GetLocalPlayer();
+
+				idVec3 cursorPos = player1->GetEyePosition();
+				gameLocal.Printf("cursor pos: [%f][%f][%f]\n", cursorPos[0], cursorPos[1], cursorPos[2]);
+				/*const idEntity* Unit = getSelectedUnit();
+				idVec3 selectedUnitOrigin = Unit->GetPhysics()->GetOrigin();
+				selectedUnit->GetPhysics()->SetOrigin(idVec3(cursorPos[0], cursorPos[1], selectedUnitOrigin[2]));*/
+				//-----------------------------------------
 			}
 			fireHeldTime = 0;
 			

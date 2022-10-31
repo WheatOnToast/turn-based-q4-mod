@@ -13,6 +13,10 @@
 // TTimo - *????????*
 #include <new>
 
+#include "../../ai/Monster_Grunt.cpp";
+#include "../../ai/Monster_Gladiator.cpp";
+
+
 rvStatManager	statManagerLocal;
 rvStatManager*	statManager = &statManagerLocal;
 
@@ -479,18 +483,20 @@ void rvStatManager::WeaponHit( const idActor* attacker, const idEntity* victim, 
 			//q4_mod_enemy_selection--------------------------
 			gameLocal.Printf("Enemy: %d\n", victim);
 			setSelectedUnit(victim);
-			getSelectedUnit();
+			const idEntity* sUnit = getSelectedUnit();
 
+			
 			idPlayer* player = NULL;
 			player = gameLocal.GetLocalPlayer();
 			player = gameLocal.GetLocalPlayer();
 			if (!player) { //if there is no local player 
 				return;
 			}
-
+			
 			idVec3 cursorPos = player->GetEyePosition();	//gets cursor position 
 			gameLocal.Printf("cursorPos: [%f][%f][%f]\n", cursorPos[0], cursorPos[1], cursorPos[2]);	//prints cursor position
 
+			
 			idVec3 unitLocation = victim->GetPhysics()->GetOrigin();	//sets location of selected unit
 			gameLocal.Printf("Unit Location: [%f][%f][%f]\n\n", unitLocation[0], unitLocation[1], unitLocation[2]);
 			victim->GetPhysics()->SetOrigin(idVec3(cursorPos[0], cursorPos[1], unitLocation[2]));	//sets new origin for selected unit

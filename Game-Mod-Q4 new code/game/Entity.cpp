@@ -8,6 +8,7 @@
 #include "client/ClientEffect.h"
 //mcg: need to know team for AddDamageEffects
 #include "ai/AI_Manager.h"
+#include "../unit.cpp"
 // RAVEN END
 
 /*
@@ -6786,4 +6787,3 @@ void idAnimatedEntity::Event_CollapseJoints ( const char* jointnames, const char
 	animator.CollapseJoints ( jointnames, collapseToJoint );	
 }
 // RAVEN END
-
