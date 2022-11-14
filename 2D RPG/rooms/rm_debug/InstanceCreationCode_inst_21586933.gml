@@ -1,1 +1,0 @@
-text_id = "debug_sign_burger"
