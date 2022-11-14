@@ -1,0 +1,1 @@
+snd_play = snd_debug_time;
